@@ -1,0 +1,6 @@
+<%= form_with model: @episode do |form|  %>
+  <%= form.select :episode_id, Episode.all.map {|p| [p.number, p.id]} %>
+  <%= form.select :guest_id, Guest.all.map {|p| [p.name]} %>
+  <%= form.number_field :rating, placeholder: "Rating" %>
+  <%= form.submit %>
+<% end  %>
