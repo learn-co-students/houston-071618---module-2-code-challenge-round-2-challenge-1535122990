@@ -1,0 +1,8 @@
+<h1>New Appearance:</h1>
+
+<%= form_with model: @appearance do |form| %>
+  Exciting Guest: <%= form.select :guest_id, @guest_options %>
+  Exciting Episode: <%= form.select :episode_id, @episode_options %>
+  Rating: <%= form.number_field :rating, in: 1..5 %>
+<%= form.submit %>
+<%end %>
