@@ -1,0 +1,9 @@
+<h1><%= @guest.name %></h1>
+<br>
+  <h3>occupation</h3>
+<h3><%= @guest.occupation %></h3>
+<h3><%@guest.appearences.each do |a| %></h3>
+<h2>Episode - Rating</h2>
+<h3><%= a.episode.number %>-
+<%= a.rating %></h3>
+<% end%>

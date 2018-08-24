@@ -1,0 +1,9 @@
+<h1>New Appearence</h1>
+<p><%= form_with model: @appearence do |f|%>
+<h3>Guest</h3>
+  <%= f.collection_select(:guest_id, Guest.all, :id, :name) %>
+  <h3>Episode</h3>
+  <%= f.collection_select(:episode_id, Episode.all, :id, :number) %>
+    <h3> Rating:</h3><%= f.select :rating, options_for_select(0..5)%>
+  <%= f.submit %>
+  <% end %></p>
