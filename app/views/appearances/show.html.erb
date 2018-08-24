@@ -1,0 +1,16 @@
+<h1>Appearances</h1>
+
+<h3>Guest: </h3>
+<ul>
+  <% @appearances.each do |appearance| %>
+    <li><%= link_to appearance.guest.name, guest_path(@appearance.guest)%></li>
+  <% end %>
+</ul>
+
+<h3>Episode: </h3>
+<ul>
+  <% @appearances.each do |appearance| %>
+    <li><%= appearance.episode.number %></li>
+    <li><%= appearance.episode.date %></li>
+  <% end %>
+</ul>
