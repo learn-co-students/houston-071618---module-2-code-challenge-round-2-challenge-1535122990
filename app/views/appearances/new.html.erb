@@ -1,0 +1,9 @@
+<%= form_with model: Appearance.new do |f| %>
+  <p>Select Episode<%=f.collection_select :episode_id, Episode.all, :id, :number %></p>
+  <p>Select Guest<%=f.collection_select :guest_id, Guest.all, :id, :name%></p>
+  <%= f.label :rating %><br>
+  <%=f.text_field :rating, placeholder: "Rating"%>
+  <%=f.submit%>
+  <% end %>
+
+
