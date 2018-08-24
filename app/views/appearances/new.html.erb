@@ -1,0 +1,8 @@
+<p>Create a new appearance:</p>
+
+<%= form_with model: Appearance.new do |form| %>
+  <p>Rating:<%= form.number_field :rating %></p>
+  <p>Guest: <%= form.collection_select :guest_id, Guest.all, :id, :name %>
+  <p>Episode: <%= form.collection_select :episode_id, Episode.all, :id, :number%>
+  <p><%= form.submit %></p>
+<% end %>
